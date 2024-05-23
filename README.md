@@ -182,13 +182,13 @@ The Total Daily and Monthly Spending are grouped by the ***Most bought Product C
 
 # Insights from Analysis 3 
 
-Analysis 3 examins **Customer Spending Trends throughout the Year**, segmented by **Month**. I look at:
+Analysis 3 examines **Customer Spending Trends throughout the Year**, segmented by **Month**. I look at:
 
 * Most Popular Product Category: The Product Category with the highest total spending in each month.
 * Number of Customers: The total number of unique customers who made purchases each month.
 * Gender Distribution: The breakdown of customers by Gender (Male and Female) for each month.
-* Total Spending: The total amount of money spent by all Customers each month.
-* 
+* Total Spending: The total amount of money spent by all Customers across **all Product Categories** each month.
+  
 The Findings:
 
 1. Spending Fluctuations: There are variations in total spending throughout the year, with some months seeing higher spending than others (e.g., May had the highest spending at 53,150).
