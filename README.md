@@ -165,7 +165,7 @@ The Total Daily and Monthly Spending are grouped by the ***Most bought Product C
 
 # Total Monthly Spending
 
-| Month | Most Bought Product Category | Number of Customers | Male Customers | Female Customers | Total Spending |
+| Month | Most Bought Product Category | Number of Customers | Male Customers | Female Customers | Total Spending on all Product Categories |
 |---|---|---|---|---|---|
 | 1 | Beauty | 78 | 38 | 40 | 36980.00 |
 | 2 | Clothing | 85 | 49 | 36 | 44060.00 |
