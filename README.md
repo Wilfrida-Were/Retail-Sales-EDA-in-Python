@@ -1,4 +1,4 @@
-# **Retail Sales EDA in Python**
+# **Retail Sales Exploratory Data Analysis in Python**
 
 This **[Retail Sales Dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** is a snapshot of a fictional retail landscape, capturing essential attributes that drive retail operations and customer interactions. It includes key details such as `Transaction ID`, `Date`, `Customer ID`, `Gender`, `Age`, `Product Category`, `Quantity`, `Price per Unit`, and `Total Amount`. 
 
