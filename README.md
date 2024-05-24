@@ -231,8 +231,8 @@ For instance, in **May**, *Male* spending is the highest at 29220.00, while *Fem
 
 ![Alt text](./Lineplot%20of%20Total%20Monthly%20Spending%20Trend%20by%20Gender.png)
 
-I will use this same dataset to perform *Retail Sales EDA in SQL*
+I use the same dataset from these analyses, to perform **[Retail Sales EDA in SQL](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-sql)**
 
-Feel free to do more analyses. Contact me for any changes and feedback
+Feel free to Contact me for any changes and feedback
 
 ***Explore and be teachable***
