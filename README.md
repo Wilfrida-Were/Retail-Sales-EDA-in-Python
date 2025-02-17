@@ -2,6 +2,8 @@
 
 This **[Retail Sales Dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** is a snapshot of a fictional retail landscape, capturing essential attributes that drive retail operations and customer interactions. It includes key details such as `Transaction ID`, `Date`, `Customer ID`, `Gender`, `Age`, `Product Category`, `Quantity`, `Price per Unit`, and `Total Amount`. 
 
+While the data used in this project is based on a synthetic dataset, the methods and insights drawn from the analysis are transferrable to any real-world data. The techniques applied here can be used to uncover actionable insights and drive better business decisions in areas such as customer behavior, sales strategies, and workforce optimization.
+
 Check out the full code in this **[Kaggle Notebook](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-python)**
 
 I will limit myself to these three questions:
@@ -9,6 +11,8 @@ I will limit myself to these three questions:
 * Analysis 1: Customer `Age`, `Gender`, and Purchasing Behaviour
 * Analysis 2: Top `Product Category` for each `Age` and `Gender`
 * Analysis 3: Total Daily and Monthly Spending grouped by `Date`, Number of Customers (`Customer ID`), `Gender`and`Product Category`
+
+![Retail image](https://th.bing.com/th/id/OIP.6dtVakiVbez83WasNUyzhAHaFh?rs=1&pid=ImgDetMain)
 
 # Data Cleaning
 
