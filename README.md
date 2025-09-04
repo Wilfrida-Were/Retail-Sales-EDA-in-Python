@@ -17,12 +17,12 @@ The analysis will answer the following key questions:
 I use the same dataset, to perform **[Retail Sales EDA in SQL](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-sql)**
 
 ## 📑 Table of Contents
-* [Key Insights and Quick Recommendations](#key-insights)
-* [Who Can Use This Project](#who-can-use-this-project)
-* [Tech Stack](#tech-stack)
-* [Workflow](#workflow)
-* [Key Learnings](#key-learnings)
-* [Let’s Connect](#lets-connect)
+1. [Key Insights and Quick Recommendations](#-key-insights-and-quick-recommendations)  
+2. [Who Can Use This Project](#-who-can-use-this-project)  
+3. [Tech Stack](#%EF%B8%8F-tech-stack)  
+4. [Workflow](#-workflow)  
+5. [Key Learnings](#-key-learnings)  
+6. [Let’s Connect](#-lets-connect)  
 
 
 ## Overall KPIs
