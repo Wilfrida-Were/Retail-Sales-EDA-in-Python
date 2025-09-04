@@ -1,242 +1,210 @@
 # **Retail Sales Exploratory Data Analysis in Python**
 
-This **[Retail Sales Dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** is a snapshot of a fictional retail landscape, capturing essential attributes that drive retail operations and customer interactions. It includes key details such as `Transaction ID`, `Date`, `Customer ID`, `Gender`, `Age`, `Product Category`, `Quantity`, `Price per Unit`, and `Total Amount`. 
+## Project Goal
+This project explores a fictional **[Retail sales dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** to uncover actionable insights on **customer behavior, product preferences, and sales trends**. The aim is to help business leaders make data-driven decisions regarding marketing, inventory, pricing, and customer engagement.
 
-While the data used in this project is based on a synthetic dataset, the methods and insights drawn from the analysis are transferrable to any real-world data. The techniques applied here can be used to uncover actionable insights and drive better business decisions in areas such as customer behavior, sales strategies, and workforce optimization.
+The analysis will answer the following key questions:
 
-Check out the full code in this **[Kaggle Notebook](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-python)**
+1. Who are our most valuable customers?
+2. How does customer age and gender influence purchasing behavior?
+3. Which product categories drive the most revenue?
+4. Monthly trends in sales and transactions
+5. What are the patterns in purchase quantity per transaction?
+6. How does pricing affect purchasing behavior?
 
-I will limit myself to these three questions:
+👉 Check out the full code in this **[Kaggle Notebook](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-python)**
 
-* Analysis 1: Customer `Age`, `Gender`, and Purchasing Behaviour
-* Analysis 2: Top `Product Category` for each `Age` and `Gender`
-* Analysis 3: Total Daily and Monthly Spending grouped by `Date`, Number of Customers (`Customer ID`), `Gender`and`Product Category`
+I use the same dataset, to perform **[Retail Sales EDA in SQL](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-sql)**
 
-![Retail image](https://th.bing.com/th/id/OIP.6dtVakiVbez83WasNUyzhAHaFh?rs=1&pid=ImgDetMain)
+## 📑 Table of Contents
+* [Key Insights and Quick Recommendations](#key-insights)
+* [Who Can Use This Project](#who-can-use-this-project)
+* [Tech Stack](#tech-stack)
+* [Workflow](#workflow)
+* [Key Learnings](#key-learnings)
+* [Let’s Connect](#lets-connect)
 
-# Data Cleaning
 
-The dataset has **1000 rows and 9 columns**
+## Overall KPIs
 
-Since this particular dataset has **No Missing values**, I will confirm if there are unexpected values by checking for *unique values* in each column and identifying potential *outliers*
+| Metric                     | Value          |
+|-----------------------------|---------------|
+| Total Revenue               | $456,000      |
+| Total Transactions          | 1,000         |
+| Avg Transaction Value       | $456          |
+| Age Range                   | 18–64         |
+| Price per Unit Range        | $25–500       |
+| Transaction Amount Range    | $25–2,000     |
 
-* There are 1000 distinct Transaction IDs and 1000 distinct Customers (Customer ID)s
-* Since there are only 345 unique dates, some customers likely made purchases on the same dates
-* The Product categories are only *Beauty*, *Clothing* and *Electronics*
 
-# Analysis 1: Customer Age, Gender, and Purchasing Behaviour
+## 🔑 Key Insights and Quick Recommendations
+## Question 1: Who are our most valuable customers?
 
-# Total spending for each combination of Age and Gender
+**Key Insights:**
+- **High Revenue Individuals:** Top 10 customers each contributed $2,000, far above the average transaction value ($456).
+- **Product Preference:** Electronics and Clothing appear most frequently among top customers, suggesting repeat or high-value transactions.
+- **Age & Gender Distribution:** Top customers are aged 22–62, with both males and females represented.
 
-| Age | Female | Male |
-|---|---|---|
-| 18 | 7940 | 3275 |
-| 19 | 7335 | 7535 |
-| 20 | 5175 | 3470 |
-| 21 | 5400 | 7185 |
-| 22 | 5425 | 8275 |
-| 23 | 2895 | 5325 |
-| 24 | 1750 | 3665 |
-| 25 | 3550 | 6350 |
-| 26 | 10375 | 3605 |
-| 27 | 4280 | 5105 |
-| 28 | 5400 | 3270 |
-| 29 | 4000 | 2570 |
-| 30 | 6285 | 3505 |
-| 31 | 2020 | 8200 |
-| 32 | 1850 | 3700 |
-| 33 | 2040 | 4200 |
-| 34 | 12050 | 4735 |
-| 35 | 6815 | 4475 |
-| 36 | 3080 | 6025 |
-| 37 | 5730 | 5920 |
-| 38 | 6020 | 5080 |
-| 39 | 3355 | 1240 |
-| 40 | 7630 | 1785 |
-| 41 | 1195 | 4455 |
-| 42 | 5290 | 3210 |
-| 43 | 10260 | 7710 |
-| 44 | 3590 | 3970 |
-| 45 | 585 | 5740 |
-| 46 | 5380 | 7710 |
-| 47 | 6315 | 6190 |
-| 48 | 5410 | 1830 |
-| 49 | 2650 | 2460 |
-| 50 | 4300 | 5545 |
-| 51 | 7270 | 8795 |
-| 52 | 4270 | 2770 |
-| 53 | 4890 | 4620 |
-| 54 | 5755 | 4750 |
-| 55 | 7070 | 2710 |
-| 56 | 6025 | 3415 |
-| 57 | 3630 | 5660 |
-| 58 | 3680 | 3715 |
-| 59 | 3785 | 5685 |
-| 60 | 7660 | 3930 |
-| 61 | 2840 | 3890 |
-| 62 | 3060 | 5060 |
-| 63 | 1205 | 8045 |
-| 64 | 6325 | 2800 |
+**Quick Recommendations:**
+- Launch VIP loyalty programs or exclusive offers for high-value customers.
+- Highlight top-selling product categories (Electronics & Clothing) in campaigns.
+- Offer targeted bundles or early access to high-value product releases.
+- Personalized outreach (email/SMS) for top 10% customers.
 
-# Insights from Analysis 1
+**Charts:**  
 
-Analysis 1 shows how **Total spending** varies with `Age` and `Gender`
+![Q1](./Images/Q1.png)
 
-For example: For 18 year olds, Females collectively spent **more** than Males. The opposite is shown for 22 year olds, and so on. 
+---
 
-See the Barplot below
+## Question 2: How does customer age and gender influence purchasing behavior?
 
-# Barplot of Total Spending by Age and Gender
+**Key Insights:**
+- **Age Trends:** Middle-aged customers (34–51) drive revenue via consistent transactions.
+- **High-Value Buyers:** Younger customers (19–37) make fewer but larger purchases.
+- **Gender Patterns:** Females slightly outspend males ($232,840 vs $223,160), with similar average transaction values (~$456).
+- **Top Age-Gender Combinations:** Female 34–26 and Male 46–51 segments show highest total revenue.
 
-![Alt text](./Barplot%20of%20Total%20Spending%20by%20Age%20and%20Gender.png)
+**Quick Recommendations:**
+- Segment marketing campaigns by age & gender for better targeting.
+- Offer premium upsells for high-transaction, high-value younger buyers.
+- Launch loyalty programs for females aged 26–34.
+- Target males 46–51 with promotions to increase transaction frequency.
+- Use age-gender segmentation for personalized emails or bundles.
 
-# Analysis 2: Top Product Categories for each Age and Gender
+**Charts:**  
 
-The table shows from **Age 18 - Age 25**, and **Age 56 - Age 64**. See the **FULL** output **[Here](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-python)**
+![Q2](./Images/Q2A.png)
+![Q2](./Images/Q2B.png)
+![Q2](./Images/Q2C.png)
 
-| Age | Product Category | Female | Male |
-|---|---|---|---|
-| 18 | Beauty            | 3195.0 | 1765.0 |
-|   | Clothing          | 2575.0 | 1510.0 |
-|   | Electronics       | 2170.0 | NaN |
-| 19 | Beauty            | 2225.0 | 2140.0 |
-|   | Clothing          | 1200.0 | 1530.0 |
-|   | Electronics       | 3910.0 | 3865.0 |
-| 20 | Beauty             | 365.0 | 2160.0 |
-|   | Clothing            | 80.0  | 360.0 |
-|   | Electronics       | 4730.0 | 950.0 |
-| 21 | Beauty            | 3300.0 | 4700.0 |
-|   | Clothing          | 1200.0 | 1885.0 |
-|   | Electronics        | 900.0  | 600.0 |
-| 22 | Beauty            | 1300.0 | 4230.0 |
-|   | Clothing          | 3275.0 | 2075.0 |
-|   | Electronics        | 850.0  | 1970.0 |
-| 23 | Beauty             | 475.0  | 165.0  |
-|   | Clothing          | 1270.0 | 3050.0 |
-|   | Electronics       | 1150.0 | 2110.0 |
-| 24 | Beauty            | 1575.0 | 1310.0 |
-|   | Clothing            | 25.0   | 2125.0 |
-|   | Electronics        | 150.0  | 230.0  |
-| 25 | Beauty            | 1000.0 | 1375.0 |
-|   | Clothing          | 2200.0 | 2150.0 |
-|   | Electronics        | 350.0  | 2825.0 |
-| 56 | Beauty            | 1635.0 | 500.0 |
-|   | Clothing          | 1790.0 | 2100.0 |
-|   | Electronics       | 2600.0 | 815.0 |
-| 57 | Beauty             | 425.0  | 3200.0 |
-|   | Clothing          | 2895.0 | 750.0 |
-|   | Electronics        | 310.0  | 1710.0 |
-| 58 | Beauty            | 2800.0 | 990.0 |
-|   | Clothing           | 760.0  | 1525.0 |
-|   | Electronics        | 120.0  | 1200.0 |
-| 59 | Beauty            | 2700.0 | NaN     |
-|   | Clothing           | 525.0  | 3585.0 |
-|   | Electronics        | 560.0  | 2100.0 |
-| 60 | Beauty             | 490.0  | 80.0  |
-|   | Clothing          | 3250.0 | 750.0 |
-|   | Electronics       | 3920.0 | 3100.0 |
-| 61 | Beauty               | NaN  | 1340.0 |
-|   | Clothing          | 2240.0 | 250.0 |
-|   | Electronics        | 600.0  | 2300.0 |
-| 62 | Beauty             | 920.0  | 305.0 |
-|   | Clothing           | 440.0  | 175.0 |
-|   | Electronics       | 1700.0 | 4580.0 |
-| 63 | Beauty             | 105.0  | 50.0  |
-|   | Clothing           | 150.0  | 2320.0 |
-|   | Electronics        | 950.0  | 5675.0 |
-| 64 | Beauty             | 640.0  | 1690.0 |
-|   | Clothing          | 4735.0 | 820.0 |
-|   | Electronics        | 950.0  | 290.0 |
+---
 
-# Insights from Analysis 2
+## Question 3: Which product categories drive the most revenue?
 
-Analysis 2 helps to identify **Trends in Customer Spending behaviour** based on `Age`, `Gender`, and `Product Category`
+**Key Insights:**
+- Electronics generate the highest revenue overall, slightly ahead of Clothing.
+- Beauty has highest average transaction value ($467).
+- Female buyers dominate Clothing and Beauty; males favor Electronics.
+- Older males (46–63) drive high-revenue Electronics and Beauty; women 25–64 drive Clothing revenue.
 
-The insights:
+**Quick Recommendations:**
+- Target female buyers for Clothing & Beauty promotions.
+- Target older males for Electronics promotions.
+- Reward repeat buyers in high-revenue segments → increase customer lifetime value.
 
-* Age Preferences: Spending habits change with Age for certain Product Categories
-* Gender Differences: There are significant differences in spending patterns between Genders for specific Product Categories
+**Charts:**  
 
-For a larger Real-life dataset, using such analysis can help to refine the **Target Audience for Marketing Campaigns**. Specific Age groups and Genders have a higher propensity to spend on certain Product Categories
+![Q3](./Images/Q3A.png)
+![Q3](./Images/Q3B.png)
+![Q3](./Images/Q3C.png)
 
-# Analysis 3: Total Daily and Monthly Spending
+---
 
-The Total Daily and Monthly Spending are grouped by the ***Most bought Product Category***, ***Number of Customers*** and ***Gender***
+## Question 4: Monthly trends in sales and transactions
 
-# Total Daily Spending
+**Key Insights:**
+- **Peak months:** May ($53,150) and October ($46,580).
+- **Low months:** September ($23,620) and March ($28,990).
+- **Average transaction value peaks:** February ($518), July ($493), December ($491).
 
-**Uncomment** the **[Code](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-python)** to get the Total Daily Spending. The output consists of **345 different Dates**
+**Quick Recommendations:**
+- Schedule promotional campaigns before low-revenue months.
+- Capitalize on high-revenue months with new product launches.
+- Align inventory & logistics with seasonal peaks to avoid stockouts.
+- Analyze February, July, December high-value purchases → design targeted campaigns.
 
-# Total Monthly Spending
+**Charts:**  
 
-| Month | Most Bought Product Category | Number of Customers | Male Customers | Female Customers | Total Spending on all Product Categories |
-|---|---|---|---|---|---|
-| 1 | Beauty | 78 | 38 | 40 | 36980.00 |
-| 2 | Clothing | 85 | 49 | 36 | 44060.00 |
-| 3 | Clothing | 73 | 32 | 41 | 28990.00 |
-| 4 | Clothing | 86 | 36 | 50 | 33870.00 |
-| 5 | Electronics | 105 | 60 | 45 | 53150.00 |
-| 6 | Clothing | 77 | 38 | 39 | 36715.00 |
-| 7 | Beauty | 72 | 35 | 37 | 35465.00 |
-| 8 | Electronics | 94 | 44 | 50 | 36960.00 |
-| 9 | Electronics | 65 | 30 | 35 | 23620.00 |
-| 10 | Electronics | 96 | 53 | 43 | 46580.00 |
-| 11 | Electronics | 78 | 39 | 39 | 34920.00 |
-| 12 | Electronics | 91 | 36 | 55 | 44690.00 |
+![Q4](./Images/Q4A.png)
+![Q4](./Images/Q4B.png)
+---
 
-# Insights from Analysis 3 
+## Question 5: Patterns in purchase quantity per transaction
 
-Analysis 3 examines **Customer Spending Trends throughout the Year**, segmented by **Month**. I look at:
+**Key Insights:**
+- Average quantity per transaction: 2.51.
+- Clothing purchases slightly higher quantity; Electronics lowest.
+- Peaks occur for Clothing in months 3 & 9; Electronics in Feb, June, Oct.
 
-* Most Popular Product Category: The Product Category with the highest total spending in each month.
-* Number of Customers: The total number of unique customers who made purchases each month.
-* Gender Distribution: The breakdown of customers by Gender (Male and Female) for each month.
-* Total Spending: The total amount of money spent by all Customers across **all Product Categories** each month.
-  
-The Findings:
+**Quick Recommendations:**
+- Plan inventory for peak months per category.
+- Offer bundle deals to encourage repeat purchase.
+- Clothing bundle promotions during March & September → increase average quantity per transaction by 0.3 units.
+- Electronics seasonal bundles in Feb, June, Oct → increase basket size and revenue.
+- Cross-sell Beauty with Clothing/Electronics in peak months → improve overall transaction value.
 
-1. Spending Fluctuations: There are variations in total spending throughout the year, with some months seeing higher spending than others (e.g., May had the highest spending at 53,150).
-2. Category Preferences: The most popular Product Category shifts across months. For instance, *Beauty* was popular in January and July, while *Electronics* dominated in several months (May, and August-December).
-3. Customer Trends: The number of customers also fluctuates, with May showing the highest number (105) and September showing the lowest (65). 
-4. Gender difference: There are slighlty more Female customers each month than Male
+**Charts:**  
 
-**Actionable Insights**
+![Q5](./Images/Q5.png)
 
-Once again, in a Real-life dataset the findings can help with:
+---
 
-* Promotions and Marketing: Understanding popular categories by month can help tailor promotions and marketing campaigns to target the right products at the right time.
-* Inventory Management: Analyzing monthly sales trends can inform inventory management strategies, ensuring you have adequate stock of popular categories during peak demand months.
-* Customer Acquisition: Months with lower customer traffic might be good times to implement customer acquisition campaigns to attract new buyers.
+## Question 6: How does pricing affect purchasing behavior?
 
-# Total Monthly Spending Trend by Gender
+**Key Insights:**
+- High-priced products ($300–$500) generate most revenue despite fewer transactions.
+- Low-priced products ($25–$50) have more transactions but less total revenue.
+- Average quantity per transaction remains stable (~2.4–2.6), showing price does not deter unit purchases.
 
-This table shows the total spending by Male and Female customers for each Month.
+**Quick Recommendations:**
+- Focus marketing on high-value products ($300–$500).
+- Bundle low-price items to encourage larger basket sizes.
+- Premium promotions for Electronics & Beauty.
+- Stock planning for high-value items → each sale significantly impacts revenue.
+- Test dynamic pricing on mid-tier items ($300) to optimize revenue.
 
-| Month | Male Spending | Female Spending |
-|---|---|---|
-| 1 | 12255.00 | 24725.00 |
-| 2 | 29665.00 | 14395.00 |
-| 3 | 15670.00 | 13320.00 |
-| 4 | 16570.00 | 17300.00 |
-| 5 | 29220.00 | 23930.00 |
-| 6 | 19840.00 | 16875.00 |
-| 7 | 18580.00 | 16885.00 |
-| 8 | 14880.00 | 22080.00 |
-| 9 | 7085.00 | 16535.00 |
-| 10 | 19980.00 | 26600.00 |
-| 11 | 20030.00 | 14890.00 |
-| 12 | 19385.00 | 25305.00 |
+**Charts:**  
+*Insert revenue vs price charts per product category.*
 
-Using the table and lineplot, we can visually compare **Spending patterns between Genders throughout the year.**
+## 👥 Who Can Use This Project?
 
-Spending fluctuates for each Gender throughout the year
+**1. Business Leaders / Managers**  
+- Quickly identify top-performing customers and revenue-driving segments.  
+- Make data-driven decisions on promotions, inventory, and product strategy.  
+- Track KPIs like Total Revenue, Avg Transaction Value, and Top Customers.  
 
-For instance, in **May**, *Male* spending is the highest at 29220.00, while *Female* spending is the highest in **October** at 26600.00.
+**2. Marketing & Sales Teams**  
+- Plan targeted campaigns by age, gender, and product category.  
+- Identify high-value segments for upsells, bundles, or loyalty programs.  
+- Optimize timing of promotions based on seasonal sales trends.  
 
-![Alt text](./Lineplot%20of%20Total%20Monthly%20Spending%20Trend%20by%20Gender.png)
+**3. Data Analysts / Data Enthusiasts**  
+- Learn real-world EDA techniques on transactional datasets.  
+- Practice visualizing customer and sales data for actionable insights.  
+- Build portfolio-ready projects with clear KPIs and insights.  
 
-I use the same dataset from these analyses, to perform **[Retail Sales EDA in SQL](https://www.kaggle.com/code/wilfridawere/retail-sales-eda-in-sql)**
+**4. Learners / Students**  
+- Understand how EDA supports business decision-making.  
+- Practice summarizing KPIs, insights, and recommendations.  
+- Learn how to present findings visually and clearly for business audiences.  
 
-Feel free to Contact me for any changes and feedback
 
-***Explore and be teachable***
+## ⚙️ Tech Stack
+- **Python (Pandas, Matplotlib, Seaborn)** – Data cleaning, preprocessing, and exploratory analysis  
+- **Kaggle Notebook** – End-to-end workflow combining code, analysis, and documentation
+
+
+## 🔄 Workflow
+1. **Raw Data** → [Kaggle Dataset: Retail Sales Dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)  
+2. **Data Cleaning & Preprocessing** → Performed in Python (Pandas) to handle missing values, fix formatting, and prepare data for analysis.  
+3. **Exploratory Data Analysis (EDA)** → Conducted in Python using Pandas for aggregations and Matplotlib/Seaborn for identifying trends and patterns.  
+4. **Visualization & Storytelling** → Built charts with Matplotlib and Seaborn to present insights in a clear, business-focused manner.  
+
+
+## 📌 Key Learnings
+- Handling missing and inconsistent data using **Pandas**.  
+- Structuring cleaned datasets for **efficient analysis and aggregation**.  
+- Applying **EDA techniques** to uncover trends and patterns.  
+- Creating **visualizations with Matplotlib & Seaborn** to communicate business insights.  
+
+
+## 🔗 Let’s Connect
+
+If my work was helpful or inspiring, feel free to connect, follow, or support:  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/wilfridawere/)  
+[![Website](https://img.shields.io/badge/Website-Visit-orange?style=flat&logo=google-chrome)](https://www.wilfridawere.com/)  
+[![Kaggle](https://img.shields.io/badge/Kaggle-Follow-blue?style=flat&logo=kaggle)](https://kaggle.com/wilfridawere)  
+[![GitHub](https://img.shields.io/badge/GitHub-Projects-black?style=flat&logo=github)](https://github.com/Wilfrida-Were)  
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-red?style=flat&logo=ko-fi)](https://ko-fi.com/wilfridawere/)  
