@@ -1,7 +1,7 @@
 # **Retail Sales Exploratory Data Analysis in Python**
 
 ## Project Goal
-This project explores a fictional **[Retail sales dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** to uncover actionable insights on **customer behavior, product preferences, and sales trends**. The aim is to help business leaders make data-driven decisions regarding marketing, inventory, pricing, and customer engagement.
+This project explores a fictional **[Retail sales dataset](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset/data)** to uncover actionable insights on **customer behavior, product preferences, and sales trends**. The aim is to help business leaders make data-driven decisions regarding marketing, inventory, pricing, and customer engagement, and lay the ground for **future predictive analytics**.
 
 The analysis will answer the following key questions:
 
@@ -38,6 +38,9 @@ I use the same dataset, to perform **[Retail Sales EDA in SQL](https://www.kaggl
 
 
 ## 🔑 Key Insights and Quick Recommendations
+
+This analysis provides actionable insights and recommendations to **boost sales, optimize inventory, and enhance customer engagement**, while laying the foundation for **future predictive analytics**.
+
 ## Question 1: Who are our most valuable customers?
 
 **Key Insights:**
@@ -153,9 +156,6 @@ I use the same dataset, to perform **[Retail Sales EDA in SQL](https://www.kaggl
 - Premium promotions for Electronics & Beauty.
 - Stock planning for high-value items → each sale significantly impacts revenue.
 - Test dynamic pricing on mid-tier items ($300) to optimize revenue.
-
-**Charts:**  
-*Insert revenue vs price charts per product category.*
 
 ## 👥 Who Can Use This Project?
 
