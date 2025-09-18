@@ -274,7 +274,11 @@ May and October are revenue peak months. Early access drives urgency and repeat 
 If my work was helpful or inspiring, feel free to connect, follow, or support:  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/wilfridawere/)  
+
+[![Twitter](https://img.shields.io/badge/X-Follow-black?style=flat&logo=twitter)](https://x.com/wilfridawere)  
+
 [![Website](https://img.shields.io/badge/Website-Visit-orange?style=flat&logo=google-chrome)](https://www.wilfridawere.com/)  
+
 [![Kaggle](https://img.shields.io/badge/Kaggle-Follow-blue?style=flat&logo=kaggle)](https://kaggle.com/wilfridawere)  
+
 [![GitHub](https://img.shields.io/badge/GitHub-Projects-black?style=flat&logo=github)](https://github.com/Wilfrida-Were)  
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-red?style=flat&logo=ko-fi)](https://ko-fi.com/wilfridawere/)  
